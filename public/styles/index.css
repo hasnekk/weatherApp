@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+#smallBg {
+    display: block;
+}
+
+#bigBg {
+    display: none;
+}
+
+.backGroundImage {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.backGroundImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 5rem;
+
+}
+
+.content p {
+    margin: 0;
+    padding: 0;
+}
+
+.weatherInfoNow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid white;
+
+    width: 12rem;
+    height: 20rem;
+
+    /* From https://css.glass */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.weatherInfoNow svg {
+    width: 50%;
+    height: max-content;
+    padding-bottom: 0.75rem;
+}
+
+.weatherInfoNow .city, .weatherInfoNow .date {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+}
+
+.weatherInfoNow span:last-child {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+.weatherPerDays {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 40%;
+
+    column-gap: 1rem;
+
+}
+
+.weatherDay {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid white;
+
+    width: 25%;
+    height: 65%;
+
+    /* From https://css.glass */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+
+}
+
+.weatherDay svg {
+    width: 4rem;
+    height: 7rem;
+
+}
+
+.weatherDay p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+}
+
+
+/*search bar*/
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+
+}
+
+form input {
+    min-width: 3rem;
+    flex-grow: 3;
+    max-width: 30rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+form button {
+    border: none;
+    background-color: black;
+    min-width: 2.3rem;
+    max-width: 8rem;
+    flex-grow: 1;
+    height: 2rem;
+    margin: 0;
+    padding: 0.3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form button svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (min-width: 600px) {
+    #bigBg {
+        display: block;
+    }
+
+    #smallBg {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .weatherPerDays {
+        height: 60%;
+    }
+
+    .weatherDay {
+        width: 20%;
+        height: 70%;
+    }
+
+    .weatherDay svg {
+        width: 6rem;
+        height: 9rem;
+
+    }
+
+    .weatherDay p {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: white;
+    }
+
+    .weatherInfoNow {
+        margin-top: 3rem;
+    }
+}

@@ -70,10 +70,18 @@ main {
     -webkit-backdrop-filter: blur(2px);
 }
 
-.weatherInfoNow svg {
+.weatherInfoNow img {
     width: 50%;
     height: max-content;
     padding-bottom: 0.75rem;
+}
+
+.weatherInfoNow .description
+{
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 2rem;
 }
 
 .weatherInfoNow .city, .weatherInfoNow .date {
@@ -98,8 +106,10 @@ main {
 
     overflow: hidden;
 
-    width: 100%;
+    width: 90%;
     height: 40%;
+
+    padding: 0px 1rem;
 
     column-gap: 1rem;
 
@@ -115,7 +125,7 @@ main {
 
     border: 1px solid white;
 
-    width: 25%;
+    width: 22%;
     height: 65%;
 
     /* From https://css.glass */
@@ -127,14 +137,18 @@ main {
 
 }
 
-.weatherDay svg {
-    width: 4rem;
-    height: 7rem;
+.weatherDay img {
+    width: 5rem;
+    height: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .weatherDay p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 900;
     color: white;
 }
@@ -205,7 +219,7 @@ form button svg {
         height: 70%;
     }
 
-    .weatherDay svg {
+    .weatherDay img {
         width: 6rem;
         height: 9rem;
 

@@ -5,7 +5,7 @@ import axios from "axios";
 const app = express();
 const port = 3000;
 
-const myApiKey = 'ba5bb9f47d5308a2935533cdfcb7b775';
+const myApiKey = '';
 const API_URL_TODAY = `https://api.openweathermap.org/data/2.5/weather?appid=${myApiKey}&units=metric`;
 const API_URL_FUTURE = `https://api.openweathermap.org/data/2.5/forecast?appid=${myApiKey}&units=metric`;
 
